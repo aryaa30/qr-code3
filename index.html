@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html.lang="en">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>QR_CODE_GENERATOR</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+        <!--qrfont-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <!--second font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap" rel="stylesheet">
+        <link rel='stylesheet' type='text/css' media='screen' href="style.css">
+
+    </head>
+
+    <body>
+        <h1>QR_CODE</h1>
+        <main>
+            <section id="qr-code-settings" class="container container-font">
+                <headeer>
+                    <h2>
+                        Generate your QR code
+                    </h2>
+                    <h3>
+                        Adjust the setting below to make your qr code look as you want
+                    </h3>
+                </headeer>
+                <div>
+                    <div class="setting">
+                        <label for="data">Text / URL</label>
+                        <span class="sub-label">Include text or url you want the QR code to load to :</span>
+                        <input type="text" name="data" id="data" min="3" max="900" required />
+                    </div>
+                    <div class="color">
+                        <div class="setting">
+                            <label for="color">main color</label>
+                            <input type="color" id="color" value="#000000">
+                            <span class="sub-label" id="color-value">#000000</span>
+                        </div>
+                        <div class="setting">
+                            <label for="bg-color">background color</label>
+                            <input type="color" id="bg-color" value="#A6A6A7">
+                            <span class="sub-label" id="bg-color-value">#A6A6A7</span>
+                        </div>
+                    </div>
+                    <div class="setting">
+                        <label for="size">SIZE</label>
+                        <span id="size-value" class="sub-lbel"> 200 x 200</span>
+                        <input type="range" name="size" id="size" min="100" max="1000" value="200" step="100">
+                    </div>
+
+                    <div class="setting">
+                        <label for="margin">MARGIN</label>
+                        <span id="margin-value" class="margin-label">1 px</span>
+                        <input type="range" name="margin" id="margin" min="0" max="50" value="1" step="1" />
+                    </div>
+                    <div class="setting">
+                        <fieldset>
+                            <legend>image format</legend>
+
+                            <div>
+                                <input type="radio" name="format" id="png" value="png" checked>
+                                <label for="png">png</label>
+
+                            </div>
+                            <div>
+                                <input type="radio" name="format" id="gif" value="gif">
+                                <label for="gif">gif</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="format" id="jpeg" value="jpeg">
+                                <label for="jpeg">jpeg</label>
+
+                            </div>
+                            <div> <input type="radio" name="format" id="jpg" value="jpg">
+                                <label for="jpg">jpg</label>
+
+                            </div>
+                            <div>
+                                <input type="radio" name="format" id="svg" value="svg">
+                                <label for="svg">svg</label>
+                            </div>
+
+
+
+                        </fieldset>
+                    </div>
+
+                    <div class="cta">
+                        <button id="cta" type="submit" disabled>GENERATE QR</button>
+
+
+            </section>
+
+            <section id="qr-code-result" class="container container-back">
+                <header>
+                    <h2>YOUR QR-CODE IS READY</h2>
+                    <h3>Scan This Image To See It In Action</h3>
+                </header>
+                <div class="setting">
+                    <img src="" alt="qr-code" id="qr-code-image" name="qr-code">
+                </div>
+
+
+                <div class="cta">
+                    <button id="edit" type="submit">
+                        GO BACK
+                    </button>
+
+                </div>
+
+                </div>
+
+
+            </section>
+        </main>
+        <script src="main.js"></script>
+    </body>
+
+    </html>
